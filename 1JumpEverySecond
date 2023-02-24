@@ -1,0 +1,62 @@
+
+-- HELLO, IM NOT A SCRIPTER, BUT IM TRYING TO LEARN SO PLEASE TELL MY WHY THIS MIGHT BE SHIT AND HOW I CAN FIX TY
+
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("+1 Jump Every Second")
+
+-- MAIN SHI
+
+getgenv().wins = false
+
+w1:Toggle(
+    "Auto Best Tower",
+    "wins",
+    false,
+    function(value)
+        getgenv().wins = value
+        while getgenv().wins == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1210.34033, 123465.648, 8270.56152, -0.109491564, -0.210867748, 0.971363187, 6.41299058e-09, 0.977238595, 0.212143213, -0.993987739, 0.0232278984, -0.106999382)
+            task.wait(1)
+        end
+    end
+)
+
+getgenv().egg = false
+
+w1:Toggle(
+    "Auto Open Best Egg",
+    "egg",
+    false,
+    function(value)
+        getgenv().egg = value
+        while getgenv().egg == true do
+            game:GetService("ReplicatedStorage").GlobalFunctions.PurchasePet:FireServer(workspace.Eggs.Spooky,false)
+            task.wait()
+        end
+    end
+)
+
+w1:Slider(
+    "WalkSpeed",
+    "WS",
+    16,
+    300,
+    function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end
+)
+
+w1:Button(
+    "Destroy GUI",
+    function()
+        for i, v in pairs(game.CoreGui:GetChildren()) do
+            if v:FindFirstChild("Top") then
+                v:Destroy()
+            end
+        end
+    end
+) -- Text, Callback
+
+w1:Label("Made By TELEY#0054")
+
