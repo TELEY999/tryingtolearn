@@ -1,0 +1,104 @@
+
+-- HELLO, IM NOT A SCRIPTER, BUT IM TRYING TO LEARN SO PLEASE TELL MY WHY THIS MIGHT BE SHIT AND HOW I CAN FIX TY
+
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("Lucky Blocks Battlegrounds")
+
+-- LUCKY BLOCK SPAWNER SHI
+
+getgenv().lb = false
+getgenv().lb2 = false
+getgenv().lb3 = false
+getgenv().lb4 = false
+getgenv().lb5 = false
+
+w1:Toggle(
+    "Lucky Blocks",
+    "luckyblock",
+    false,
+    function(value)
+        getgenv().lb = value
+        while getgenv().lb == true do
+            game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+            task.wait()
+        end
+    end
+)
+
+w1:Toggle(
+    "Super Lucky Blocks",
+    "luckyblock2",
+    false,
+    function(value)
+        getgenv().lb2 = value
+        while getgenv().lb2 == true do
+            game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+            task.wait()
+        end
+    end
+)
+
+w1:Toggle(
+    "Diamond Lucky Blocks",
+    "luckyblock3",
+    false,
+    function(value)
+        getgenv().lb3 = value
+        while getgenv().lb3 == true do
+            game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+            task.wait()
+        end
+    end
+)
+
+w1:Toggle(
+    "Rainbow Lucky Blocks",
+    "luckyblock4",
+    false,
+    function(value)
+        getgenv().lb4 = value
+        while getgenv().lb4 == true do
+            game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+            task.wait()
+        end
+    end
+)
+
+w1:Toggle(
+    "Galaxy Lucky Blocks",
+    "luckyblock5",
+    false,
+    function(value)
+        getgenv().lb5 = value
+        while getgenv().lb5 == true do
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+            task.wait()
+        end
+    end
+)
+
+-- OTHER SHI
+
+w1:Slider(
+    "WalkSpeed",
+    "WS",
+    16,
+    300,
+    function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end
+)
+
+w1:Button(
+    "Destroy GUI",
+    function()
+        for i, v in pairs(game.CoreGui:GetChildren()) do
+            if v:FindFirstChild("Top") then
+                v:Destroy()
+            end
+        end
+    end
+) 
+
+w1:Label("Made By TELEY#0054")
