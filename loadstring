@@ -1,0 +1,14 @@
+--[[ NOT A SCRIPTER BUT IM TRYING TO LEARN
+TELEY#0054 ON DISCORD]]
+
+-- FALL OF HELL
+if game.PlaceId == 1069951594 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/fallofhell/main/script"))()
+-- +1 JUMP EVERY SECOND
+elseif game.PlaceId == 9834528893 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/1JumpEverySecond"))()
+-- LUCKY BLOCKS BATTLEGROUNDS
+elseif game.PlaceId == 662417684 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/LuckyBlocksBattlegrounds"))()
+end
+
