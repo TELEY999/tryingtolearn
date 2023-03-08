@@ -1,0 +1,44 @@
+-- THIS HAS LIKE NO FEATURES AS OF RN I KNOW BUT IT GETS WINS
+-- HELLO, IM NOT A SCRIPTER, BUT IM TRYING TO LEARN SO PLEASE TELL MY WHY THIS MIGHT BE SHIT AND HOW I CAN FIX TY
+task.wait()
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("+1 TNT Every Seconds") 
+
+
+getgenv().wins = false
+
+w1:Toggle(
+    "Auto Wins",
+    "wins",
+    false,
+    function(toggled)
+        getgenv().wins = toggled
+        while getgenv().wins == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.33453023, 26746.6914, -4.78425932, -0.622078478, 0.262811095, -0.737528741, 1.82460749e-08, 0.941981196, 0.335665703, 0.782954872, 0.208810404, -0.585986257)
+            task.wait(1)
+        end        
+    end
+)
+
+w1:Button(
+    "TP To Second Spawn",
+    function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.4069891, 28354.8047, -34.2373886, -0.967507005, -4.67627803e-09, 0.252844304, -6.88891166e-09, 1, -7.86567966e-09, -0.252844304, -9.3519219e-09, -0.967507005)
+        task.wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.4069891, 28354.8047, -34.2373886, -0.967507005, -4.67627803e-09, 0.252844304, -6.88891166e-09, 1, -7.86567966e-09, -0.252844304, -9.3519219e-09, -0.967507005)
+    end
+)
+
+w1:Button(
+    "Destroy GUI",
+    function()
+        for i, v in pairs(game.CoreGui:GetChildren()) do
+            if v:FindFirstChild("Top") then
+                v:Destroy()
+            end
+        end
+    end
+)
+
+w1:Label("Made By TELEY#0054")
