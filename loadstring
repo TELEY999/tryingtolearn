@@ -11,6 +11,6 @@ elseif game.PlaceId == 9834528893 then
 elseif game.PlaceId == 662417684 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/LuckyBlocksBattlegrounds"))()
 -- +1 TNT EVERY SECONDS
-elseif game.PlaceId == then
+elseif game.PlaceId == 12573139413 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/%2B1TNTEverySeconds"))()
 end
