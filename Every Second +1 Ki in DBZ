@@ -1,0 +1,98 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "☯️Every Second +1 Ki in DBZ☯️ (MADE BY TELEY#0054)",
+	LoadingTitle = "Shout Out To KeimuScripts",
+	LoadingSubtitle = "MADE BY TELEY#0054",
+	ConfigurationSaving = {
+	   Enabled = false,
+	   FolderName = nil, 
+	   FileName = "Big Hub"
+	},
+	Discord = {
+	   Enabled = false,
+	   Invite = "noinvitelink", 
+	   RememberJoins = true 
+	},
+	KeySystem = false, 
+	KeySettings = {
+	   Title = "Sirius Hub",
+	   Subtitle = "Key System",
+	   Note = "Join the discord (discord.gg/sirius)",
+	   FileName = "SiriusKey",
+	   SaveKey = true,
+	   GrabKeyFromSite = false,
+	   Key = "Hello"
+	}
+ })
+
+ local MainTab = Window:CreateTab("Main", 4483362458)
+
+ local Toggle = MainTab:CreateToggle({
+	Name = "Autofarm (INF WINS)",
+	CurrentValue = false,
+	Flag = "Toggle1", 
+	Callback = function(Value)
+		getgenv().wins = Value
+		while getgenv().wins == true do
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["1"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["2"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["3"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["4"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["5"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["6"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["7"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["8"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["9"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["10"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["11"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["12"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["13"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["14"].Part,true)
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.DmgHandle:FireServer(workspace.World["15"].Part,true) 
+		end
+	end,
+ })
+
+ local Label = MainTab:CreateLabel("Autofarm works on all worlds!!")
+
+ local Toggle = MainTab:CreateToggle({
+	Name = "Auto Rebirth",
+	CurrentValue = false,
+	Flag = "Toggle2", 
+	Callback = function(Value)
+		getgenv().rebirth = Value
+		while getgenv().rebirth == true do
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.RebirthEvent:FireServer()
+		end
+	end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+	Name = "Auto Best Egg (20M)",
+	CurrentValue = false,
+	Flag = "Toggle3", 
+	Callback = function(Value)
+		getgenv().bestegg = Value
+		while getgenv().bestegg == true do
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.Draw.DrawRequest:FireServer("draw010",1)
+		end
+	end,
+ })
+
