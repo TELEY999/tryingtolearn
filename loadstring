@@ -13,4 +13,7 @@ elseif game.PlaceId == 662417684 then
 -- +1 TNT EVERY SECONDS
 elseif game.PlaceId == 12573139413 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/%2B1TNTEverySeconds"))()
+-- ☯️[UPD 5]Every Second +1 Ki in DBZ☯️
+elseif game.PlaceId == 12524383962 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/Every%20Second%20%2B1%20Ki%20in%20DBZ"))()
 end
