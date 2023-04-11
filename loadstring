@@ -42,4 +42,7 @@ elseif game.PlaceId == 12573139413 then
 -- ☯️[UPD 5]Every Second +1 Ki in DBZ☯️
 elseif game.PlaceId == 12524383962 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/Every%20Second%20%2B1%20Ki%20in%20DBZ"))()
+-- Faction Defense Tycoon
+elseif game.PlaceId == 891539556 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/FactionDefenseTycoon"))()
 end
