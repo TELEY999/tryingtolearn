@@ -27,7 +27,10 @@ local Window = Rayfield:CreateWindow({
  })
 
  local MainTab = Window:CreateTab("Main", 4483362458)
+ local EggTab = Window:CreateTab("Egg", 4483362458)
 
+ local Label = MainTab:CreateLabel("SCRIPT LAST UPDATED ON 12TH APRIL 2023")
+ local Label = MainTab:CreateLabel("Autofarm works on all worlds!!")
  local Toggle = MainTab:CreateToggle({
 	Name = "Autofarm (INF WINS)",
 	CurrentValue = false,
@@ -68,8 +71,6 @@ local Window = Rayfield:CreateWindow({
 	end,
  })
 
- local Label = MainTab:CreateLabel("Autofarm works on all worlds!!")
-
  local Toggle = MainTab:CreateToggle({
 	Name = "Auto Rebirth",
 	CurrentValue = false,
@@ -83,7 +84,20 @@ local Window = Rayfield:CreateWindow({
 	end,
  })
 
- local Toggle = MainTab:CreateToggle({
+ local Toggle = EggTab:CreateToggle({
+	Name = "Auto Equip Best",
+	CurrentValue = false,
+	Flag = "Toggle5", 
+	Callback = function(Value)
+		getgenv().regg = Value
+		while getgenv().regg == true do
+			task.wait(5)
+			game:GetService("ReplicatedStorage").Events.Pet.EquipBest:FireServer()
+		end
+	end,
+ })
+
+ local Toggle = EggTab:CreateToggle({
 	Name = "Auto Best Egg (20M)",
 	CurrentValue = false,
 	Flag = "Toggle3", 
@@ -96,3 +110,15 @@ local Window = Rayfield:CreateWindow({
 	end,
  })
 
+ local Toggle = EggTab:CreateToggle({
+	Name = "Auto Free Robux Egg (Need 300 wins per egg)",
+	CurrentValue = false,
+	Flag = "Toggle4", 
+	Callback = function(Value)
+		getgenv().regg = Value
+		while getgenv().regg == true do
+			task.wait()
+			game:GetService("ReplicatedStorage").Events.Player.Draw.DrawRequest:FireServer("draw011",1)
+		end
+	end,
+ })
