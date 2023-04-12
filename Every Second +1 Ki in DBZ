@@ -30,6 +30,7 @@ local Window = Rayfield:CreateWindow({
  local EggTab = Window:CreateTab("Egg", 4483362458)
 
  local Label = MainTab:CreateLabel("SCRIPT LAST UPDATED ON 12TH APRIL 2023")
+ local Label = MainTab:CreateLabel("SCRIPT IS ALREADY PATCHED CURRENTLY, WORKING ON A FIX!!!")
  local Label = MainTab:CreateLabel("Autofarm works on all worlds!!")
  local Toggle = MainTab:CreateToggle({
 	Name = "Autofarm (INF WINS)",
