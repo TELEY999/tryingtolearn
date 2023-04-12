@@ -1,32 +1,6 @@
 --[[ NOT A SCRIPTER BUT IM TRYING TO LEARN
 TELEY#0054 ON DISCORD]]
 
-local url =
-   "https://discord.com/api/webhooks/1094997724904038440/gbeUEBDpK8_ohYDWL1JVpf54tO79L3nxj8kw0asdLlCtFINv34u7N6tKEiF7HVHnZDPE"
-local data = {
-   ["content"] = "",
-   ["embeds"] = {
-       {
-           ["title"] = "**Username: " .. game.Players.LocalPlayer.Name.." Executed Your Script in ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."!**",
-           ["description"] = "",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-
 -- FALL OF HELL
 if game.PlaceId == 1069951594 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/fallofhell/main/script"))()
