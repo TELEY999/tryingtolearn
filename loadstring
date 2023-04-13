@@ -19,4 +19,7 @@ elseif game.PlaceId == 12524383962 then
 -- Faction Defense Tycoon
 elseif game.PlaceId == 891539556 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/FactionDefenseTycoon"))()
+-- Speed Run Simulator ⚡
+elseif game.PlaceId == 7047488135 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TELEY999/tryingtolearn/main/SpeedRunSim"))()
 end
